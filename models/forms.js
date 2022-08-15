@@ -139,12 +139,10 @@ exports.FormsAirlines = {
       isRequired: false,
     },
     feeCaseAppeal: {
-      type: Text,
-      isRequired: false,
-    },
-    feeCaseAppeal: {
-      type: Text,
-      isRequired: false,
+      type: Select,
+      dataType: "string",
+      options: feeAppealOptions,
+      isRequired: true,
     },
     /**
      * IF TRUE
@@ -159,8 +157,10 @@ exports.FormsAirlines = {
       isRequired: false,
     },
     feeCostNotification: {
-      type: Text,
-      isRequired: false,
+      type: Select,
+      dataType: "string",
+      options: feeProviderNotiOptions,
+      isRequired: true,
     },
     feeCostNotificationDocument: {
       type: Text,
@@ -170,6 +170,10 @@ exports.FormsAirlines = {
       type: Text,
       isRequired: false,
     },
+        /**
+     * C
+     * =============
+     */
     authorityFineResNumberReference: {
       type: Text,
       isRequired: false,
@@ -180,27 +184,37 @@ exports.FormsAirlines = {
      * =============
      */
     supplierIsFeed: {
-      type: Text,
-      isRequired: false,
+      type: Select,
+      dataType: "string",
+      options: supplierCostOptions,
+      isRequired: true,
     },
     supplierStatus: {
-      type: Text,
-      isRequired: false,
+      type: Select,
+      dataType: "string",
+      options: supplierStatusOptions,
+      isRequired: true,
     },
     supplierFeeDate: {
-      type: Text,
-      isRequired: false,
+      type: CalendarDay,
+      format: "yyyy-MM-dd",
+      dateFrom: format(today, "yyyy-MM-dd"),
+      dateTo: format(monthsLater, "yyyy-MM-dd"),
+      defaultValue: format(today, "yyyy-MM-dd"),
+      isRequired: true,
     },
     /**
-     * FEE NO RECOVERED
+     * IF FEE CAN NOT BE  RECOVERED
      * =============
-     */ supplierFeeNotRecDesc: {
+     */ supplierFeeNotRecResponsable: {
       type: Text,
       isRequired: false,
     },
     supplierFeeNotRecReason: {
-      type: Text,
-      isRequired: false,
+      type: Select,
+      dataType: "string",
+      options: feedNotRecoveredReasonsOptions,
+      isRequired: true,
     },
     supplierFeeNotRecAddInfo: {
       type: Text,
@@ -258,12 +272,16 @@ exports.FormsAirlines = {
       isRequired: false,
     },
     contableStatus: {
-      type: Text,
-      isRequired: false,
+      type: Select,
+      dataType: "string",
+      options: societyContableStatusOptions,
+      isRequired: true,
     },
     payCustodyStatus: {
-      type: Text,
-      isRequired: false,
+      type: Select,
+      dataType: "string",
+      options: statusCustodyOptions,
+      isRequired: true,
     },
   },
   labelResolver: (item) => item.name,

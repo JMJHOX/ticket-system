@@ -648,7 +648,50 @@ var authCostOptions = [
   { value: "SI", label: "SI" },
   { value: "NO", label: "NO", }
 ];
+var feeAppealOptions = [
+  { value: "SI", label: "SI" },
+  { value: "NO", label: "NO" }
+];
+
+var feeProviderNotiOptions = [
+  { value: "SI", label: "SI" },
+  { value: "NO", label: "NO" }
+];
+var supplierCostOptions = [
+  { value: "SI", label: "SI" },
+  { value: "NO", label: "NO" }
+];
+var supplierStatusOptions = [
+  { value: "En espera de pago", label: "En espera de pago" },
+  { value: "Pendiente facturar", label: "Pendiente facturar" },
+  { value: "Multa recuperada", label: "Multa recuperada" },
+  { value: "Apelada", label: "Apelada" },
+  { value: "Multa No recuperable", label: "Multa No recuperable" },
+];
+var feedNotRecoveredReasonsOptions = [
+  { value: "En espera de pago", label: "En espera de pago" },
+  { value: "Pendiente facturar", label: "Pendiente facturar" },
+  { value: "Multa recuperada", label: "Multa recuperada" },
+  { value: "Apelada", label: "Apelada" },
+  { value: "Multa No recuperable", label: "Multa No recuperable" },
+];
+var societyContableStatusOptions = [
+  { value: "Pendiente por pagar", label: "Pendiente por pagar" },
+  { value: "Generar factura cobro proveedor", label: "Generar factura cobro proveedor" },
+  { value: "Multa pagada", label: "Multa pagada" }
+];
+var statusCustodyOptions = [
+  { value: "Pendiente pagar custodio", label: "Pendiente pagar custodio" },
+  { value: "Custodio pagado", label: "Custodio pagado" }
+];
 module.exports = {
+  statusCustodyOptions,
+  societyContableStatusOptions,
+  feedNotRecoveredReasonsOptions,
+  supplierStatusOptions,
+  supplierCostOptions,
+  feeProviderNotiOptions,
+  feeAppealOptions,
   authCostOptions,
   resMigrOptions,
   authSanctionOptions,
